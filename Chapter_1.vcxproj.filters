@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Class">
+      <UniqueIdentifier>{63ad89bf-cb84-4f03-a491-a1461f6485f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Basic">
+      <UniqueIdentifier>{9eda89a5-60dc-4572-b636-cd638f5d65de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\standard library">
+      <UniqueIdentifier>{bd869a7e-dae2-4025-bda6-e23d8e575f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\standard library\IO class">
+      <UniqueIdentifier>{1c9b6046-cb09-40f3-9035-d8362a59d064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\standard library\泛型算法">
+      <UniqueIdentifier>{af68a5bb-253f-4f72-8c65-52d38e10d18d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\standard library\关联容器">
+      <UniqueIdentifier>{23c0cd6a-efc9-4ae6-ac4e-5ad6d71ffd78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\standard library\动态内存">
+      <UniqueIdentifier>{a1387aa7-cffb-4986-aefb-75738ce8e7f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Class CSD">
+      <UniqueIdentifier>{8c2b524f-fb3f-4269-b026-931f6e39b803}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="array.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Cal.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="const.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="constexpr.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="exception.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="funcwitharray.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="stringtest.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="struct.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Typetransform.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="vector.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="sales_data.cpp">
+      <Filter>源文件\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>源文件\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>源文件\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="mainclass.cpp">
+      <Filter>源文件\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="mainIO.cpp">
+      <Filter>源文件\standard library\IO class</Filter>
+    </ClCompile>
+    <ClCompile Include="顺序容器.cpp">
+      <Filter>源文件\standard library\IO class</Filter>
+    </ClCompile>
+    <ClCompile Include="算法.cpp">
+      <Filter>源文件\standard library\泛型算法</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>源文件\standard library\关联容器</Filter>
+    </ClCompile>
+    <ClCompile Include="IntelligentPointer.cpp">
+      <Filter>源文件\standard library\动态内存</Filter>
+    </ClCompile>
+    <ClCompile Include="StrBlob.cpp">
+      <Filter>源文件\standard library\动态内存</Filter>
+    </ClCompile>
+    <ClCompile Include="可变形参.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="summary.cpp">
+      <Filter>源文件\standard library</Filter>
+    </ClCompile>
+    <ClCompile Include="TextQuery.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="constructor.cpp">
+      <Filter>源文件\Class CSD</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>源文件\Class CSD</Filter>
+    </ClCompile>
+    <ClCompile Include="StrVec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sales_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StrBlob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TextQuery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StrVec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
