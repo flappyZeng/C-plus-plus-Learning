@@ -131,6 +131,7 @@
     <ClCompile Include="exception.cpp" />
     <ClCompile Include="funcwitharray.cpp" />
     <ClCompile Include="IntelligentPointer.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="mainclass.cpp" />
     <ClCompile Include="mainIO.cpp" />
     <ClCompile Include="map.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="sales_data.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="StrBlob.cpp" />
+    <ClCompile Include="String.cpp" />
     <ClCompile Include="stringtest.cpp" />
     <ClCompile Include="struct.cpp" />
     <ClCompile Include="StrVec.cpp" />
@@ -157,6 +159,7 @@
     <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="StrBlob.h" />
+    <ClInclude Include="String.h" />
     <ClInclude Include="StrVec.h" />
     <ClInclude Include="TextQuery.h" />
   </ItemGroup>

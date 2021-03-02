@@ -135,7 +135,7 @@ void C9T41()
 
 void C9T43(std::string& s, std::string oldVal , std::string newVal)
 {
-	int len = oldVal.size();
+	size_t len = oldVal.size();
 	std::string::iterator it = s.begin();
 	for (; it != s.end(); ++it)
 	{
@@ -188,7 +188,7 @@ std::string C9T49(const std::string& word)
 	std::string::size_type pos = 0, newpos = 0;
 	while((newpos = word.find_first_of(except, pos + 1)) != std::string::npos)
 	{
-		if (newpos - pos - 1 > len)
+		if (static_cast<int>(newpos - pos - 1) > len)
 		{
 			max_pos = pos + 1;
 			len = newpos - pos - 1;

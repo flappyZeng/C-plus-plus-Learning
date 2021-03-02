@@ -43,14 +43,14 @@ vector<int>* getVector(vector<int>::size_type size)
 
 void getValues(vector<int>* vc)
 {
-	int size = vc->size();
+	size_t size = vc->size();
 	for (int i = 0; i < size; ++i)
 		cin >> (*vc)[i];
 }
 
 void showVc(vector<int>* vc)
 {
-	int size = vc->size();
+	size_t size = vc->size();
 	for (int i = 0; i < size; ++i)
 		cout << (*vc)[i];
 	cout << endl;
@@ -65,14 +65,14 @@ shared_ptr<vector<int>> getVectorSP(vector<int>::size_type size)
 
 void getValueSP(shared_ptr<vector<int>> vc)
 {
-	int size = vc->size();
+	size_t size = vc->size();
 	for (int i = 0; i < size; ++i)
 		cin >> (*vc)[i];
 }
 
 void showVcSP(shared_ptr<vector<int> > vc)
 {
-	int size = vc->size();
+	size_t size = vc->size();
 	for (int i = 0; i < size; ++i)
 		cout << (*vc)[i] << " ";
 	cout << endl;

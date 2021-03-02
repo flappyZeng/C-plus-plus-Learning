@@ -5,7 +5,19 @@
 
 #include<string>
 #include<set>
-class Floder;
+class Message;
+
+class Folder {
+public:
+	Folder() {}
+	Folder(Folder& f) : messages(f.messages) {};
+	Folder& operator=(const Folder&);
+
+	void addMsg(Message*);
+	void remMsg(Message*);
+private:
+	std::set<Message*>messages;
+};
 
 class Message{
 	friend class Folder;
@@ -25,6 +37,10 @@ public:
 		folders.erase(&f);
 		f.remMsg(this);
 	}
+
+	//将m对应的folders指向本身
+	void move_folders(Message* m);  //使用移动构造函数移动folders
+	Message& operator=(Message&& m); //移动赋值运算符
 private:
 	std::string contents;
 	std::set<Folder*>folders;
@@ -32,18 +48,6 @@ private:
 	void add_to_Folders(const Message&);
 	void remove_from_Folders();
 
-};
-
-class Folder {
-public:
-	Folder() {}
-	Folder(Folder& f) : messages(f.messages) {};
-	Folder& operator=(const Folder&);
-
-	void addMsg(Message*);
-	void remMsg(Message*);
-private:
-	std::set<Message*>messages;
 };
 #endif // !MESSAGE_H
 

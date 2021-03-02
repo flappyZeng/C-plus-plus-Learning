@@ -175,7 +175,7 @@ void C11T27(const string& Auther)
 	multimap<string, string>AutherandBooks = { {"Harry","BEBE"}, {"Bob", "SIDN"}, {"Harry", "SSFF"}, {"Cindy", "Diisi"} };
 	//auto ret = AutherandBooks.find(Auther);
 	decltype(AutherandBooks.find(Auther)) it = AutherandBooks.begin();
-	int count = AutherandBooks.count(Auther);
+	size_t count = AutherandBooks.count(Auther);
 	if(count)
 	{
 		AutherandBooks.erase(Auther);

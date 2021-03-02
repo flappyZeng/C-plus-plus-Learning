@@ -18,6 +18,7 @@ public:
 	bool empty() const { return data->empty(); }
 
 	void push_back(const std::string& s) { data->push_back(s); }
+	void push_back(std::string&& s) { data->push_back(std::move(s)); }
 	void pop_back();
 
 	//ิชหุตฤทรฮส

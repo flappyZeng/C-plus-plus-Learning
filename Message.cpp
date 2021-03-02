@@ -11,17 +11,35 @@ void Folder::remMsg(Message* m)
 	messages.erase(m);
 }
 
-
-Folder::Folder(Folder& f)
-{
-	messages = f.messages;
-}
-
 Folder& Folder::operator=(const Folder&f)
 {
 	messages = f.messages;
+	return *this;
 }
 
+
+void Message::move_folders(Message* m)
+{
+	folders = std::move(m->folders);  //调用set的移动赋值运算符
+	for (auto f : folders)
+	{
+		f->remMsg(m);
+		f->addMsg(this);
+	}
+	m->folders.clear();
+}
+
+Message& Message::operator=(Message&& m)
+{
+	if (this != &m)
+	{
+		remove_from_Folders();
+		contents = std::move(m.contents);
+		move_folders(&m);
+	}
+	return *this;
+	// TODO: 在此处插入 return 语句
+}
 
 void Message::add_to_Folders(const Message& m)
 {
@@ -39,9 +57,8 @@ void Message::remove_from_Folders()
 {
 	for (auto f : folders)
 		f->remMsg(this);
-
-
 }
+
 Message::~Message()
 {
 	remove_from_Folders();
