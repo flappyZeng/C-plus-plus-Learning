@@ -37,6 +37,9 @@
     <Filter Include="源文件\Class CSD">
       <UniqueIdentifier>{8c2b524f-fb3f-4269-b026-931f6e39b803}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\面向对象">
+      <UniqueIdentifier>{244c6ea6-3748-4947-897d-65d3fa113ad7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="array.cpp">
@@ -117,10 +120,19 @@
     <ClCompile Include="StrVec.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="String.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="String.cpp">
+    <ClCompile Include="overload.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OOP.cpp">
+      <Filter>源文件\面向对象</Filter>
+    </ClCompile>
+    <ClCompile Include="quote.cpp">
+      <Filter>源文件\面向对象</Filter>
+    </ClCompile>
+    <ClCompile Include="C13.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -150,6 +162,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="String.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="quote.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

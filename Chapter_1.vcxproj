@@ -131,12 +131,15 @@
     <ClCompile Include="exception.cpp" />
     <ClCompile Include="funcwitharray.cpp" />
     <ClCompile Include="IntelligentPointer.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="C13.cpp" />
     <ClCompile Include="mainclass.cpp" />
     <ClCompile Include="mainIO.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="Message.cpp" />
+    <ClCompile Include="OOP.cpp" />
+    <ClCompile Include="overload.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="quote.cpp" />
     <ClCompile Include="sales_data.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="StrBlob.cpp" />
@@ -156,6 +159,7 @@
     <ClInclude Include="Base.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="quote.h" />
     <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="StrBlob.h" />

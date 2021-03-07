@@ -42,6 +42,19 @@ Sales_data& Sales_data::combine(Sales_data trans)
 	return *this;
 }
 
+Sales_data& Sales_data::operator+(const Sales_data& rhs)
+{
+	if (isbn() != rhs.isbn())
+	{
+		std::cout << "Different book can't do add operation!" << std::endl;
+		return *this;
+	}
+	units_sold += rhs.units_sold;
+	revenue += rhs.revenue;
+	return *this;
+	// TODO: 在此处插入 return 语句
+}
+
 std::string Sales_data::isbn() const
 {
 	return bookNo;
@@ -54,11 +67,27 @@ Sales_data add(const Sales_data& lhs, const Sales_data& rhs)
 	return sum;
 }
 
+std::istream& operator>>(std::istream& op, Sales_data& in)
+{
+	return read(op, in);
+	// TODO: 在此处插入 return 语句
+}
+
+std::ostream& operator<<(std::ostream& op, const Sales_data& out)
+{
+	return print(op, out);
+	// TODO: 在此处插入 return 语句
+}
+
 std::istream& read(std::istream& op, Sales_data & in)
 {
 	double price;
 	op >> in.bookNo >> in.units_sold >> price;
-	in.revenue = in.units_sold * price;
+	//添加检查机制
+	if (op)
+		in.revenue = in.units_sold * price;
+	else
+		in = Sales_data();
 	return op;
 }
 

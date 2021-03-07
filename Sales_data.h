@@ -20,16 +20,28 @@ public:
 	
 	std::string isbn() const;
 	Sales_data& combine(Sales_data trans);
-	/*
-	Sales_data operator=(Sales_data trans)
+	
+	Sales_data operator=(const Sales_data& trans)
 	{
-		this->bookNo = trans.bookNo;
-		this->units_sold = trans.units_sold;
-		this->revenue = trans.revenue;
+		if (this != &trans)
+		{
+			this->bookNo = trans.bookNo;
+			this->units_sold = trans.units_sold;
+			this->revenue = trans.revenue;
+		}
 		return *this;
 	}
-	*/
 	
+	/*
+	输入、输出运算符重载必须为非成员函数
+	std::istream& operator>>(std::istream& in);
+	std::ostream& operator<<(std::ostream& out);
+	*/
+	Sales_data& operator+(const Sales_data& rhs);
+
+	friend std::istream& operator>>(std::istream& op, Sales_data& in);
+	friend std::ostream& operator<<(std::ostream& op, const Sales_data& out);
+
 	friend std::istream& read(std::istream& op, Sales_data& in);
 	friend std::ostream& print(std::ostream& op, const Sales_data& out);
 	friend Sales_data add(const Sales_data& lhs, const Sales_data& rhs);
