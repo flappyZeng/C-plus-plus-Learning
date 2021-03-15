@@ -1,6 +1,5 @@
 #include"Base.h"
 
-
 //using 声明不应该出现在头文件内
 using std::cin;
 using std::cout;

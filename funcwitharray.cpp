@@ -34,7 +34,8 @@ auto func_two(int arr[][10], int i) -> int(*)[10]
 }
 
 //返回数组函数的第三类定义, 这里不能单纯使用decltype(arr1)，因为这里decltype只能获取数据数组，能不能获取指针
-decltype(arr1)* func_three(int arr[][10], int i)
+
+decltype(arr1)*  func_three(int arr[][10], int i)
 {
 	cout << __func__ << endl;  //用来保存函数名字的宏
 	return &arr[i];

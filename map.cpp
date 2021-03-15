@@ -152,8 +152,8 @@ void C11T17()
 
 void C11T19()
 {
-	multiset < Sales_data,  bool(*)(const Sales_data &,  const Sales_data & rhs) > bookstoref(compareIsbn);
-	multiset<Sales_data, decltype(compareIsbn)* >bookstore(compareIsbn);  //自定义排序函数，传入函数指针
+	multiset < Sales_data, bool(*)(const Sales_data&, const Sales_data & rhs) > bookstoref{ compareIsbn };
+	multiset<Sales_data, decltype(compareIsbn)* >bookstore{ compareIsbn };  //自定义排序函数，传入函数指针
 	decltype(compareIsbn) s;
 	multiset<Sales_data>::iterator item = bookstore.begin();
 }

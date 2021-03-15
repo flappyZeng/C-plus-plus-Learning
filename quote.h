@@ -1,17 +1,29 @@
 #pragma once
 #include<string>
-
+#include<iostream>
 //任何构造函数之外的非静态函数都可以是虚函数
 
 class Quote{
 public:
 	Quote() = default; //构造函数不能是虚函数
+	Quote(const Quote&) = default;
 	Quote(const std::string& book, double sales_price) : bookNo(book), price(sales_price) {}
-
+	virtual Quote* clone() const & { return  new Quote(*this); }
+	virtual Quote* clone()  && { return new Quote(std::move(*this)); }
 	std::string isbn() const;
+	Quote& operator=(Quote& rhs);
 	virtual double net_price(std::size_t n) const { return price * n; };
-	virtual ~Quote() = default; //基类默认都是需要是虚函数
+	virtual ~Quote() = default; //基类默认都是需要是虚析构函数
 	virtual void debug() const;
+	void swap(Quote* lhs, Quote* rhs)
+	{
+		if (lhs != rhs)
+		{
+			using std::swap;
+			swap(lhs->bookNo, rhs->bookNo);
+			swap(lhs->price, rhs->price);
+		}
+	}
 private:
 	std::string bookNo;
 
@@ -36,7 +48,8 @@ class Bulk_quote : public Disc_quote {
 public:
 	Bulk_quote() = default;
 	Bulk_quote(const std::string& book, double sales_price, std::size_t _min_qty, double _distount);
-
+	virtual Bulk_quote* clone() const & { return  new Bulk_quote(*this); }
+	virtual Bulk_quote* clone()  && { return new Bulk_quote(std::move(*this)); }
 	double net_price(std::size_t n) const override;
 	virtual void debug() const override;
 };
@@ -54,7 +67,7 @@ public:
 double print_total(std::ostream& os, const Quote& item, size_t n);
 
 //ps： 虚函数的默认实参是由调用者的静态类型决定的
-/*
+
 class A {
 public:
 	virtual void f(int a = 10) { std::cout << a << std::endl; }
@@ -63,12 +76,15 @@ class B : public  A {
 public:
 	void f(int a = 5) { std::cout << a << std::endl; }
 };
-int main()
+/*
+int mainc()
 {
 	A a;
 	B b;
 	A* p = &b;
+	Bulk_quote bq;
 	p->f();  //输出的是10；
-
+	return 0;
 }
 */
+

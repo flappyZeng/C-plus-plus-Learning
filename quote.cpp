@@ -13,6 +13,13 @@ std::string Quote::isbn() const
 	return bookNo;
 }
 
+Quote& Quote::operator=(Quote& rhs)
+{
+	if (this != &rhs)
+		swap(this, &rhs);
+	return  *this;
+}
+
 void Quote::debug() const
 {
 	std::cout << "member in class Quote: \n";

@@ -135,6 +135,12 @@
     <ClCompile Include="C13.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Basket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Query.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h">
@@ -165,6 +171,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="quote.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Basket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Query.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

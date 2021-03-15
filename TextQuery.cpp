@@ -13,7 +13,7 @@ TextQuery::TextQuery(std::ifstream& infile):file(new std::vector<std::string>())
 		{
 			auto& lines = wm[word];  //map下标操作会默认添加新的键值对
 			if (!lines)
-				lines.reset(new std::set<int>);  //reset将指针指向新的内存空间，并销毁原有指示的空间
+				lines.reset(new std::set<line_no>);  //reset将指针指向新的内存空间，并销毁原有指示的空间
 			lines->insert(countLine);
 		}
 		countLine++;
@@ -33,15 +33,15 @@ TextQueryWithStrBlob::TextQueryWithStrBlob(std::ifstream& infile): file(new StrB
 		{
 			auto& lines = wm[word];  //map下标操作会默认添加新的键值对
 			if (!lines)
-				lines.reset(new std::set<int>);  //reset将指针指向新的内存空间，并销毁原有指示的空间
+				lines.reset(new std::set<line_no>);  //reset将指针指向新的内存空间，并销毁原有指示的空间
 			lines->insert(countLine);
 		}
 		countLine++;
 	}
 }
-QueryResult TextQuery::query(std::string& s)
+QueryResult TextQuery::query(const std::string& s) const
 {
-	static wsetp nodata(new std::set<int>);  //静态变量，就可以当作引用参数传递
+	static wsetp nodata(new std::set<line_no>);  //静态变量，就可以当作引用参数传递
 	auto loc = wm.find(s);
 	if (loc == wm.end())
 	{
@@ -53,7 +53,7 @@ QueryResult TextQuery::query(std::string& s)
 
 QueryResultWithSrBlob TextQueryWithStrBlob::query(std::string& s)
 {
-	static wsetp nodata(new std::set<int>);  //静态变量，就可以当作引用参数传递
+	static wsetp nodata(new std::set<line_no>);  //静态变量，就可以当作引用参数传递
 	auto loc = wm.find(s);
 	if (loc == wm.end())
 	{

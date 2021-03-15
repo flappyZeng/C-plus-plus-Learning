@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="array.cpp" />
+    <ClCompile Include="Basket.cpp" />
     <ClCompile Include="const.cpp" />
     <ClCompile Include="constexpr.cpp" />
     <ClCompile Include="Cal.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="OOP.cpp" />
     <ClCompile Include="overload.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Query.cpp" />
     <ClCompile Include="quote.cpp" />
     <ClCompile Include="sales_data.cpp" />
     <ClCompile Include="Screen.cpp" />
@@ -157,8 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Basket.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Query.h" />
     <ClInclude Include="quote.h" />
     <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Screen.h" />

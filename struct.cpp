@@ -9,7 +9,7 @@ struct Sales_data {
 
 struct Foo { /* something empty*/ };
 
-// 不加上;会导致编译器将Foo识别为main函数的返回值， 提示Foo后面接int是非法的
+// 不加上;会导致编译器将Foo识别为函数的返回值， 提示Foo后面接int是非法的
 int mainBase()
 {
 	return 0;
