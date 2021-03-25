@@ -45,6 +45,7 @@ private:
 
 //WordQuery
 class WordQuery : public Query_base {
+public:
 	friend class Query;
 	WordQuery(const std::string& s) : query_word(s) { /*std::cout << "调用WordQuery的构造函数" << std::endl; */};
 	QueryResult eval(const TextQuery& t) const { return t.query(query_word); }
@@ -55,6 +56,7 @@ class WordQuery : public Query_base {
 
 //NotQuery
 class NotQuery : public Query_base {
+public:
 	friend Query operator~(const Query& );
 	NotQuery(const Query& q) : query(q) {};
 	std::string rep() const { return "~(" + query.rep() + ")"; }
@@ -83,6 +85,7 @@ protected:
 
 //AndQuery
 class AndQuery : public BinaryQuery {
+public:
 	friend Query operator&(const Query&, const Query&);
 	AndQuery(const Query& l, const Query& r):BinaryQuery(l, r, "&") {}
 	QueryResult eval(const TextQuery&) const;
@@ -96,6 +99,7 @@ inline Query operator&(const Query& lhs, const Query& rhs)
 
 //OrQuery
 class OrQuery : public BinaryQuery {
+public:
 	friend Query operator|(const Query&, const Query&);
 	OrQuery(const Query& l, const Query& r) :BinaryQuery(l, r, "|") {}
 	QueryResult eval(const TextQuery&) const;

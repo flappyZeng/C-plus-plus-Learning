@@ -105,7 +105,7 @@ void TypeDefName()
 
 	map<int, vector<int> >::key_type v6 = 0;  //int类型
 	map<int, vector<int> >::mapped_type v7; // vector<int>类型
-	map<int, vector<int> >::value_type v8; // pair<const int, vector<int>>类型
+	map<int, vector<int> >::value_type v8; // int, vector<int>类型
 }
 
 void Iterator()
@@ -226,7 +226,7 @@ int mainmp()
 	pair<int, int>pr;   //定义在头文件utility中
 	//C11T17();
 	map<int, int>mp;
-	vector<pair<int, int> >vcp = { { {1, 2}, {3, 4}, {5, 6}, {7, 8} } };
+	vector< pair<int, int> >vcp = { { {1, 2}, {3, 4}, {5, 6}, {7, 8} } };
 	mp.insert(vcp.begin(), vcp.begin() + 3);
 	mp.emplace(make_pair(1, 2 ));
 	for (pair<const int, int>& item : mp)

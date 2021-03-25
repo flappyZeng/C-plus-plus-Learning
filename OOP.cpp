@@ -134,14 +134,14 @@ int maint()
 }
 
 #include"./Query.h"
-int main()
+int mainQuery()
 {
 	std::string path = "C:\\Users\\Administrator\\Desktop\\words.txt";
 	std::ifstream ifs(path, std::ifstream::in);
 	TextQuery text(ifs);
-	Query q = Query("the") & Query("in");
+	Query q = Query("is") | Query("are");
 	print(std::cout, q.eval(text));
-
+	return 0;
 }
 
 

@@ -21,6 +21,14 @@ void print(int(&ia)[10])
 		cout << ia[i] << endl;
 }
 
+//20210316，补上print的模板版定义
+template<typename T, unsigned N>
+void print(const T (&p)[N] )
+{
+	for (int i = 0; i < N; ++i)
+		cout << p[i] << " ";
+	cout << endl;
+}
 //返回数组的函数
 int(*func(int arr[][10], int i))[10]
 {

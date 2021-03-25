@@ -15,6 +15,7 @@ public:
 	Screen(pos ht, pos wd, char c) :height(ht), width(wd), contents(ht* wd, c), access_ctr(0) {}
 	const Screen& display(std::ostream& op) const;
 	Screen& display(std::ostream& op);
+	inline int  get_cursor() const { return cursor; }
 	char get() const { return contents[cursor]; }  //隐式内联函数
 	inline char get(pos ht, pos wd) const;  //显式内联函数
 	inline Screen& set(char c)
@@ -27,6 +28,10 @@ public:
 		contents[ht * width + wd] = c;
 		return *this;
 	}
+	//C19返回一个指向Screen对象contents成员的成员指针
+	static const std::string Screen::*data() { return &Screen::contents; }
+
+
 	Screen& move(pos r, pos c);
 	void some_member() const;
 	pos size() const;

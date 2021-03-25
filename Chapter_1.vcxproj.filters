@@ -141,6 +141,21 @@
     <ClCompile Include="Query.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="C16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenTemplate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C17.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C18.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C19.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h">
@@ -177,6 +192,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Query.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Template.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenTemplate.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

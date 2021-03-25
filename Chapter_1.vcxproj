@@ -125,6 +125,9 @@
   <ItemGroup>
     <ClCompile Include="array.cpp" />
     <ClCompile Include="Basket.cpp" />
+    <ClCompile Include="C17.cpp" />
+    <ClCompile Include="C18.cpp" />
+    <ClCompile Include="C19.cpp" />
     <ClCompile Include="const.cpp" />
     <ClCompile Include="constexpr.cpp" />
     <ClCompile Include="Cal.cpp" />
@@ -144,12 +147,14 @@
     <ClCompile Include="quote.cpp" />
     <ClCompile Include="sales_data.cpp" />
     <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="ScreenTemplate.cpp" />
     <ClCompile Include="StrBlob.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="stringtest.cpp" />
     <ClCompile Include="struct.cpp" />
     <ClCompile Include="StrVec.cpp" />
     <ClCompile Include="summary.cpp" />
+    <ClCompile Include="C16.cpp" />
     <ClCompile Include="TextQuery.cpp" />
     <ClCompile Include="Typetransform.cpp" />
     <ClCompile Include="vector.cpp" />
@@ -166,9 +171,11 @@
     <ClInclude Include="quote.h" />
     <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="ScreenTemplate.h" />
     <ClInclude Include="StrBlob.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="StrVec.h" />
+    <ClInclude Include="Template.h" />
     <ClInclude Include="TextQuery.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
